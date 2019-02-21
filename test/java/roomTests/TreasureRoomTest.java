@@ -38,6 +38,17 @@ public class TreasureRoomTest {
         assertEquals(false, treasureRoom.getCompleted());
     }
 
+    @Test
+    public void canTakeTreasureFromRoom(){
+        treasureRoom.damage(100);
+        assertEquals(600, treasureRoom.getAmount());
+    }
+
+    @Test
+    public void treasureRoomCanBeEmptied(){
+        treasureRoom.damage(700);
+        assertEquals(true, treasureRoom.getCompleted());
+    }
 
 
 
