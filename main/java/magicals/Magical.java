@@ -1,6 +1,9 @@
 package magicals;
 
-public abstract class Magical {
+import interfaces.IDamagable;
+import interfaces.IHealable;
+
+public abstract class Magical implements IDamagable, IHealable {
     String name;
     int health;
     Spell spell;
@@ -48,5 +51,9 @@ public abstract class Magical {
     public void damage(int damage){
         damage -= beast.getProtection();
         this.health -= damage;
+    }
+
+    public void heal(int heal){
+        this.health += heal;
     }
 }

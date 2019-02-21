@@ -1,6 +1,7 @@
 package healers;
 
-public class Cleric {
+
+public class Cleric{
 
 
     String name;
@@ -15,7 +16,6 @@ public class Cleric {
         return name;
     }
 
-
     public int getHealingPower() {
         return healingPower;
     }
@@ -23,4 +23,7 @@ public class Cleric {
     public void setHealingPower(int healingPower) {
         this.healingPower = healingPower;
     }
+
+
+
 }

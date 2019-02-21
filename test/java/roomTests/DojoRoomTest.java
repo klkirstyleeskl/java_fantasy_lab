@@ -4,6 +4,7 @@ import org.junit.Test;
 import rooms.DojoRoom;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 
 public class DojoRoomTest {
@@ -39,6 +40,17 @@ public class DojoRoomTest {
         assertEquals(false, dojoRoom.getCompleted());
     }
 
+    @Test
+    public void dojoRoomCanTakeDamage(){
+        dojoRoom.damage(100);
+        assertEquals(400, dojoRoom.getAmount());
+    }
+
+    @Test
+    public void dojoRoomCanBeDefeated(){
+        dojoRoom.damage(500);
+        assertEquals(true, dojoRoom.getCompleted());
+    }
 
 
 
