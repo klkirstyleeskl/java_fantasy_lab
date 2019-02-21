@@ -42,5 +42,21 @@ public class BarbarianTest {
         assertEquals("chainMail", barbarian.getArmour().getType());
     }
 
+    @Test
+    public void barbarianCanRecieveDamage(){
+        barbarian.damage(15);
+        assertEquals(95, barbarian.getHealth());
+    }
+
+    @Test
+    public void babarianCanBeHealed(){
+        barbarian.damage(15);
+        barbarian.heal(5);
+        assertEquals(100, barbarian.getHealth());
+    }
+
+
+
+
 
 }

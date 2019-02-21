@@ -43,4 +43,10 @@ public abstract class Magical {
     public void setBeast(Beast beast) {
         this.beast = beast;
     }
+
+
+    public void damage(int damage){
+        damage -= beast.getProtection();
+        this.health -= damage;
+    }
 }

@@ -1,6 +1,10 @@
 package soldiers;
 
-public abstract class Soldier {
+
+import interfaces.IDamagable;
+import interfaces.IHealable;
+
+public abstract class Soldier implements IDamagable, IHealable {
     String name;
     int health;
     Weapon weapon;
@@ -40,4 +44,15 @@ public abstract class Soldier {
     public void setArmour(Armour armour) {
         this.armour = armour;
     }
+
+    public void damage( int damage) {
+        damage -= armour.getProtection();
+        this.health -= damage;
+    }
+
+    public void heal(int heal){
+        this.health += heal;
+    }
+
+
 }

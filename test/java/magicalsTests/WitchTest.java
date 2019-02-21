@@ -37,7 +37,13 @@ public class WitchTest {
         assertEquals("7 Wonders", witch.getSpell().getName());
     }
 
-    @Test public void WizardHasBeast(){
+    @Test public void witchHasBeast(){
         assertEquals("Ogre", witch.getBeast().getName());
+    }
+
+    @Test
+    public void witchCanBeDamaged(){
+        witch.damage(20);
+        assertEquals(95, witch.getHealth());
     }
 }
