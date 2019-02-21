@@ -1,7 +1,9 @@
 package healers;
 
 
-public class Cleric{
+import interfaces.IDamagable;
+
+public class Cleric implements IDamagable {
 
 
     String name;
@@ -24,6 +26,8 @@ public class Cleric{
         this.healingPower = healingPower;
     }
 
-
-
+    @Override
+    public void damage(int points) {
+        this.healingPower -= points;
+    }
 }

@@ -9,10 +9,10 @@ public class Game {
     ArrayList<IDamagable> characters;
 
 
-    public Game(String name, ArrayList<Room> rooms, ArrayList<IDamagable> characters) {
+    public Game(String name) {
         this.name = name;
-        this.rooms = rooms;
-        this.characters = characters;
+        this.rooms = new ArrayList<>();
+        this.characters = new ArrayList<>();
     }
 
 
@@ -30,6 +30,13 @@ public class Game {
 
     public ArrayList<IDamagable> getCharacters() {
         return characters;
+    }
+
+    public void addRoom(Room room){
+        this.rooms.add(room);
+    }
+    public void addCharacter(IDamagable character){
+        this.characters.add(character);
     }
 
 }
