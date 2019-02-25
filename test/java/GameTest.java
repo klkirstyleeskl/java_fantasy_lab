@@ -67,6 +67,11 @@ public class GameTest {
 //
 //    }
 
+    @Test
+    public void characterCanGetMoney(){
+       
+    }
+
 
 
 
