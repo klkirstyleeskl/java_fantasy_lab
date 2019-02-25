@@ -39,12 +39,14 @@ public class Game {
         this.characters.add(character);
     }
 
-    public boolean getCompleted(Room room){
-        this.addRoom(room);
-        room.getCompleted(room);
-    }
+//    public boolean getCompleted(Room room){
+//        this.addRoom(room);
+//        room.getCompleted(room);
+//    }
 
-    
+
+
+
 
 
 

@@ -57,11 +57,15 @@ public class GameTest {
 
     @Test
     public void roomIsNotFinished(){
-       assertEquals(true, game.getRooms().getCompleted());
+       game.getRooms();
+       assertEquals(false, dojoRoom.getCompleted());
     }
 
-    @Test
-    public void
+//    @Test
+//    public void characterCanBeAttacked(){
+//       assertEquals(game.);
+//
+//    }
 
 
 
