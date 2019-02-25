@@ -11,7 +11,6 @@ import soldiers.Barbarian;
 import soldiers.Weapon;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
 
 public class GameTest {
     Game game;
@@ -55,6 +54,15 @@ public class GameTest {
     public void gameHasACharacter(){
         assertEquals(3, game.getCharacters().size());
     }
+
+    @Test
+    public void roomIsNotFinished(){
+       assertEquals(true, game.getRooms().getCompleted());
+    }
+
+    @Test
+    public void
+
 
 
 
